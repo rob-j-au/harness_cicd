@@ -2,6 +2,8 @@
 
 Example of manifests for use in a Harness CD that can be shared between all deployed services (using Harness variable interpolation)
 
+Manifests stored in `.cicd/` of each repository
+
 **Non-shared**
 
 Runtime Environment Variables are required to be set as appropriate for each service in:
