@@ -1,0 +1,28 @@
+# K8S / Harness
+envName: <+env.name>
+appName: <+service.name> 
+artifactImage: <+artifact.image> #from Harness Service Primary Artifact
+containerPort: <+serviceVariables.containerPort>
+servicePort: 80
+namespace:  <+service.name>-<+env.name>
+ingressDomainName: <+serviceVariables.ingressDomainName>
+ingressClassName: <+serviceVariables.ingressClassName>
+
+# Service / Environment variables
+
+PG_USERNAME: <+serviceVariables.PG_USERNAME>
+PG_PASSWORD: <+serviceVariables.PG_PASSWORD>
+PG_DATABASE: <+serviceVariables.PG_DATABASE>
+PG_HOST: <+serviceVariables.PG_HOST>
+PG_PORT: <+serviceVariables.PG_PORT>
+PG_SCHEMA: <+serviceVariables.PG_SCHEMA>
+SEQ_DIALECT: <+serviceVariables.SEQ_DIALECT>
+SEQ_POOL_MAX: <+serviceVariables.SEQ_POOL_MAX>
+SEQ_POOL_MIN: <+serviceVariables.SEQ_POOL_MIN>
+SEQ_POOL_ACQUIRE: <+serviceVariables.SEQ_POOL_ACQUIRE>
+SEQ_POOL_IDLE: <+serviceVariables.SEQ_POOL_IDLE>
+LOGGER_CATEGORY: <+serviceVariables.LOGGER_CATEGORY>
+LOGGER_LEVEL: <+serviceVariables.LOGGER_LEVEL>
+APP_HOST: <+serviceVariables.APP_HOST>
+APP_PORT: <+serviceVariables.APP_PORT>
+JWT_SECRET: <+serviceVariables.JWT_SECRET>

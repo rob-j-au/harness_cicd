@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{.Values.appName}}-{{.Values.envName}}-config
+  namespace: {{.Values.namespace}}
+data:
+  PG_USERNAME: {{.Values.PG_USERNAME}}
+  PG_PASSWORD: {{.Values.PG_PASSWORD}}
+  PG_DATABASE: {{.Values.PG_DATABASE}}
+  PG_HOST: {{.Values.PG_HOST}}
+  PG_PORT: {{.Values.PG_PORT}}
+  PG_SCHEMA: {{.Values.PG_SCHEMA}}
+  SEQ_DIALECT: {{.Values.SEQ_DIALECT}}
+  SEQ_POOL_MAX: {{.Values.SEQ_POOL_MAX}}
+  SEQ_POOL_MIN: {{.Values.SEQ_POOL_MIN}}
+  SEQ_POOL_ACQUIRE: {{.Values.SEQ_POOL_ACQUIRE}}
+  SEQ_POOL_IDLE: {{.Values.SEQ_POOL_IDLE}}
+  LOGGER_CATEGORY: {{.Values.LOGGER_CATEGORY}}
+  LOGGER_LEVEL: {{.Values.LOGGER_LEVEL}}
+  APP_HOST: {{.Values.APP_HOST}}
+  APP_PORT: {{.Values.APP_PORT}}
+  JWT_SECRET: {{.Values.JWT_SECRET}}
